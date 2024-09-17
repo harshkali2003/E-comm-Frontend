@@ -11,7 +11,7 @@ export default function SIgnUp() {
   const CollectData = async (e) =>{
     e.preventDefault()
 
-    let data = await fetch('http://localhost:5000/register' ,{
+    let data = await fetch('https://e-comm-backend-pxwb.onrender.com/register' ,{
       method:"post",
       body:JSON.stringify({name , email , password}),
       headers:{'Content-Type' : 'application/json'}
