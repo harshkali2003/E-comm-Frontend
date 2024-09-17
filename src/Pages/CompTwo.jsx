@@ -13,7 +13,7 @@ export default function CompTwo({handleClick}) {
   }, []);
 
   const fetchData = async () => {
-    let data = await fetch("http://localhost:5000/products" , {
+    let data = await fetch("https://e-comm-backend-pxwb.onrender.com/products" , {
       headers :{
         authorization :`bearer ${JSON.parse(localStorage.getItem('Token'))}` 
       }
