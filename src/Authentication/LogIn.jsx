@@ -10,7 +10,7 @@ export default function LogIn() {
   const CollectData = async (e)=>{
     e.preventDefault()
 
-    let data = await fetch('http://localhost:5000/logUser' , {
+    let data = await fetch('https://e-comm-backend-pxwb.onrender.com/logUser' , {
       method:"post",
       body:JSON.stringify({email,password}),
       headers:{'Content-Type':'application/json'}
