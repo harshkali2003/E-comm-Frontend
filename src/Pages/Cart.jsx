@@ -39,7 +39,7 @@ export default function Cart({ cart, setCart }) {
 
   const createOrder = async () => {
     try {
-      const response = await axios.post('http://localhost:5000/user/payment' , {amount:price})
+      const response = await axios.post('https://e-comm-backend-pxwb.onrender.com/user/payment' , {amount:price})
       paymentVerify(response.data);
     }catch (error){
       console.log('error');
@@ -53,7 +53,7 @@ export default function Cart({ cart, setCart }) {
       currency : "INR",
       name: "Harsh",
       order_id : data.OrderId,
-      callback_url : 'http://localhost:5000/user/paymentVerify',
+      callback_url : 'https://e-comm-backend-pxwb.onrender.com/user/paymentVerify',
       notes : {
         address : "Razorpay Corporate Office"
       },
