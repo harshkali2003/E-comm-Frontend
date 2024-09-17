@@ -9,7 +9,7 @@ export default function Feedback() {
 
     const CollectData = async (e)=>{
         e.preventDefault()
-        let data = await fetch('http://localhost:5000/feedback',{
+        let data = await fetch('https://e-comm-backend-pxwb.onrender.com/feedback',{
             method:"post",
             body:JSON.stringify({name , email , desc}),
             headers:{'Content-Type' : 'application/json' ,    authorization :`bearer ${JSON.parse(localStorage.getItem('Token'))}` } 
