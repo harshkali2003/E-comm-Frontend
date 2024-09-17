@@ -9,7 +9,7 @@ export default function AllProducts() {
   }, []);
 
   const fetchData = async () => {
-    let data = await fetch("http://localhost:5000/products" , {
+    let data = await fetch("https://e-comm-backend-pxwb.onrender.com/products" , {
       headers :{
         authorization :`bearer ${JSON.parse(localStorage.getItem('Token'))}` 
       }
@@ -19,7 +19,7 @@ export default function AllProducts() {
   };
 
   const handleDelete = async (id) => {
-    let data = await fetch(`http://localhost:5000/addProduct/${id}`, {
+    let data = await fetch(`https://e-comm-backend-pxwb.onrender.com/addProduct/${id}`, {
       method: "delete",
       headers :{
         authorization :`bearer ${JSON.parse(localStorage.getItem('Token'))}` 
