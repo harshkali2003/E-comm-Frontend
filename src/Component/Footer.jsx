@@ -9,7 +9,7 @@ export default function Footer() {
 
   const SubscribeUser = async (e)=>{
     e.preventDefault()
-  let data = await fetch('http://localhost:5000/subscribe' ,{
+  let data = await fetch('https://e-comm-backend-pxwb.onrender.com/subscribe' ,{
     method:"post",
     body:JSON.stringify({email}),
     headers:{'Content-Type' : 'application/json'}
