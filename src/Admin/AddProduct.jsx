@@ -13,7 +13,7 @@ export default function AddProduct() {
   const AddProduct = async (e)=>{
     e.preventDefault()
 
-    let data = await fetch('http://localhost:5000/addProduct',{
+    let data = await fetch('https://e-comm-backend-pxwb.onrender.com/addProduct',{
       method:"post",
       body:JSON.stringify({name,desc,cat,price}),
       headers:{'Content-Type' : 'application/json' , authorization :`bearer ${JSON.parse(localStorage.getItem('Token'))}`}
